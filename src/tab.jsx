@@ -1,27 +1,19 @@
 import React from "react";
-// import { Tabs, Tab } from "react-bootstrap";
-import { BiChevronRight } from "react-icons/bi";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import MainComponent from "./Component/firstcomponent";
-import Signup from "./Component/signup";
-
 
 function TabBar() {
-    const SignIn = () => {
-        return (
-            <div>
-                <Signup />
-            </div>)
-    }
     return (
         <div>
             <div>
                 <div>
                     <Tabs>
                         <Tab eventKey="home" title="Home">
-                            <div>
-                                <MainComponent />
+                            <div className="container-fluid" >
+                                <div className="row">
+                                    <MainComponent />
+                                </div>
                             </div>
                         </Tab>
                         <Tab eventKey="products" title="Products">
@@ -41,11 +33,6 @@ function TabBar() {
                         </Tab>
                     </Tabs>
                 </div>
-                {/* <div>
-                    <button onClick={SignIn}>
-                        Sign in <BiChevronRight />
-                    </button>
-                </div> */}
             </div>
         </div>
     )
