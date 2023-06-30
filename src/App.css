@@ -36,40 +36,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* .background_canvas {
-  position: relative;
-  display: block;
-  width: inherit;
-  height: 100%;
-  opacity: 0;
-}
-.background_color {
-  --gradientColorZero: #a960ee;
-  --gradientColorOne: #ff333d;
-  --gradientColorTwo: #90e0ff;
-  --gradientColorThree: #ffcb57;
-  --gradientColorZeroTransparent: rgba(169,96,238,0);
-  --gradientColorOneTransparent: rgba(255,51,61,0);
-  --gradientColorTwoTransparent: rgba(144,224,255,0);
-  --gradientColorThreeTransparent: rgba(255,203,87,0);
-  --gradientAngle: var(--angleStrong);
-  --gradientHeight: calc(100% + var(--sectionPaddingTop) + var(--transformOriginX)*var(--sectionAngleSin));
-  --offsetX: var(--gutterWidth);
-  --transformOriginX: -60px;
-  --sectionAngleSin: var(--angleStrongSin);
-  position: absolute;
-  bottom: 0;
-  top: auto;
-  left: calc(var(--offsetX)*-1);
-  width: var(--windowWidth);
-  height: var(--gradientHeight);
-  transform-origin: var(--transformOriginX) 100%;
-  transform: skewY(var(--gradientAngle));
-  overflow: hidden;
-  border: none;
-} */
-
 .Gradient {
   overflow: hidden;
 }
@@ -140,10 +106,6 @@
   display: inline-block;
   border-radius: 16.5px;
 }
-/* .button_display{
-  display: flex;
-  align-items: center;
-} */
 .icons {
   --gridColumnCount: 4;
   --gridRowGap: 60px;
@@ -261,8 +223,51 @@
   transition-property: #00d4ff, opacity;
   border-radius: 50px;
 }
+.ColumnLayout_content {
+  --columnRowGap: 32px;
+  display: grid;
+  row-gap: var(--columnRowGap);
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+}
 @media (min-width: 900px) {
-  .ColumnLayout[data-columns="1,1,1,1"] {
+  .ColumnLayout_content[data-columns="1,1,1,1"] {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+.CtaButton.Variant_Content_Button {
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #00d4ff;
+  white-space: nowrap;
+  transition-property: #00d4ff, opacity;
+  border-radius: 50px;
+}
+.copy__body_content {
+  padding: 50px 0 16px;
+  font-weight: 300;
+  font-family: "sohne-var", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.55555;
+  color: #adbdcc;
+  max-width: 810px;
+  text-align: initial;
+}
+.copy_title_content {
+  position: relative;
+  font-size: 24px;
+  line-height: 1.263157895;
+  font-family: "sohne-var", "Helvetica Neue", "Arial", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.2px;
+  text-align: initial;
+}
+.main-footer {
+  color: #0a2540;
+  background-color: #f6f9fc;
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
